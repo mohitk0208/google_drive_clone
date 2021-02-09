@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import { Card, Form, Button, Alert } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
+import CenteredContainer from "./CenteredContainer"
 
 export default function Signup() {
 	const emailRef = useRef();
@@ -34,7 +35,7 @@ export default function Signup() {
 
 		Promise.all(promises)
 			.then(() => {
-				history.push("/");
+				history.push("/user");
 			})
 			.catch(() => {
 				setError("Failed to update profile.");
@@ -45,7 +46,7 @@ export default function Signup() {
 	}
 
 	return (
-		<>
+		<CenteredContainer>
 			<Card>
 				<Card.Body>
 					<h2 className="text-center mt-4">Update Profile</h2>
@@ -83,8 +84,8 @@ export default function Signup() {
 				</Card.Body>
 			</Card>
 			<div className="w-100 text-center mt-2">
-				<Link to="/">Cancel</Link>
+				<Link to="/user">Cancel</Link>
 			</div>
-		</>
+		</CenteredContainer>
 	);
 }
