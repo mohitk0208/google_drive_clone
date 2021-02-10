@@ -7,6 +7,7 @@ import Signup from "./authentication/Signup";
 import PrivateRoute from "./authentication/PrivateRoute";
 import ForgotPassword from "./authentication/ForgotPassword";
 import UpdateProfile from "./authentication/UpdateProfile";
+import Dashboard from "./google-drive/Dashboard";
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 				<Switch>
 
 					{/* Drive */}
+					<PrivateRoute exact path="/" component={Dashboard} />
 
 					{/* Profile */}
 					<PrivateRoute  path="/user" component={Profile} />
