@@ -26,3 +26,9 @@
 - making breadcrumbs using bootstrap
 - using bootstrap component as __Link__ component 
 - using the slice function on Array    // to learn 
+
+
+- setting up the firebase rules
+    > such that only the authenticated users can read the data i.e the folders, also to create a folder we need to have the same authId as the authid We are using to created the folder with. 
+    
+    - >thus another user cannot see nor create a folder of a different user

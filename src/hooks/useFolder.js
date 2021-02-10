@@ -72,7 +72,8 @@ export function useFolder(folderId = null, folder = null) {
 				});
 				// console.log(database.formatDoc(doc));
 			})
-			.catch(() => {
+			.catch((e) => {
+				console.error(e);
 				dispatch({
 					type: ACTIONS.UPDATE_FOLDER,
 					payload: { folder: ROOT_FOLDER },
