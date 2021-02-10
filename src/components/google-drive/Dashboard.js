@@ -4,9 +4,12 @@ import Navbar from "./Navbar";
 import AddFolderButton from "./AddFolderButton";
 import { useFolder } from "../../hooks/useFolder";
 import Folder from "./Folder";
+import {useParams} from "react-router-dom"
 
 export default function Dashboard() {
-	const { folder, childFolders } = useFolder("6xzufoiHThsmon97RXsz");
+
+    const {folderId} = useParams();
+	const { folder, childFolders } = useFolder(folderId);
 
 	console.log(folder);
 
