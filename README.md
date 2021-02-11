@@ -32,3 +32,7 @@
     > such that only the authenticated users can read the data i.e the folders, also to create a folder we need to have the same authId as the authid We are using to created the folder with. 
     
     - >thus another user cannot see nor create a folder of a different user
+
+- using the storage to upload files to firebase
+    - getting the download url of the uploaded file
+    - tracking the completion of uploading of a file event 
