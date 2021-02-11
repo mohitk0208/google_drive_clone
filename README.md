@@ -33,6 +33,12 @@
     
     - >thus another user cannot see nor create a folder of a different user
 
+    - for read , create , and update 
+
 - using the storage to upload files to firebase
     - getting the download url of the uploaded file
-    - tracking the completion of uploading of a file event 
+    - tracking the completion of uploading of a file event
+
+- using progressBar component and tracking the progress of file upload using the firebase available functions
+
+- handled duplicates in the database, by replacing the old one with the new one if the file name , userid and folder are same 
