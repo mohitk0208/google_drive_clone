@@ -62,7 +62,7 @@ export function useFolder(folderId = null, folder = null) {
 	}, [folderId, folder]);
 
 	useEffect(() => {
-		if (folderId == null) {
+		if (folderId === null) {
 			return dispatch({
 				type: ACTIONS.UPDATE_FOLDER,
 				payload: { folder: ROOT_FOLDER },

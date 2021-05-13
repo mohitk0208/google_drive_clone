@@ -22,7 +22,7 @@ export default function AddFolderButton({currentFolder}) {
     function handleSubmit(e) {
         e.preventDefault();
 
-        if(currentFolder == null) return;
+        if(currentFolder === null) return;
 
 
         const path = [...currentFolder.path]
